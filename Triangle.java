@@ -1,25 +1,24 @@
-
-// Represents triangle shapes.
 public class Triangle implements Shape {
-    private double a;
-    private double b;
-    private double c;
-    
-    // Constructs a new Triangle given side lengths.
-    public Triangle(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-    
-    // Returns this triangle's area using Heron's formula.
-    public double getArea() {
-        double s = (a + b + c) / 2.0;
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+    private double base;
+    private double height;
+    private double side1;
+    private double side2;
+
+    public Triangle(double base, double height, double side1, double side2) {
+        this.base = base;
+        this.height = height;
+        this.side1 = side1;
+        this.side2 = side2;
     }
 
-    // Returns the perimeter of this triangle.
+    @Override
+    public double getArea() {
+        return 0.5 * base * height;
+    }
+
+    @Override
     public double getPerimeter() {
-        return a + b + c;
+        return base + side1 + side2;
     }
 }
