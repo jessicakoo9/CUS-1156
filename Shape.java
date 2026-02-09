@@ -1,6 +1,5 @@
+Shape c = new Circle(5);
+Shape r = new Rectangle(4, 6);
 
-// A general interface for shape classes.
-public interface Shape {
-    double getArea();
-    double getPerimeter();
-}
+System.out.println(c.getArea());
+System.out.println(r.getPerimeter());
